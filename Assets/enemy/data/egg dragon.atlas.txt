@@ -1,0 +1,97 @@
+
+egg dragon.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer 1
+  rotate: false
+  xy: 2, 30
+  size: 225, 123
+  orig: 225, 123
+  offset: 0, 0
+  index: -1
+Layer 2
+  rotate: true
+  xy: 946, 152
+  size: 102, 40
+  orig: 102, 40
+  offset: 0, 0
+  index: -1
+Layer 3
+  rotate: false
+  xy: 587, 17
+  size: 138, 94
+  orig: 138, 94
+  offset: 0, 0
+  index: -1
+Layer 4
+  rotate: false
+  xy: 763, 147
+  size: 181, 107
+  orig: 181, 107
+  offset: 0, 0
+  index: -1
+Layer 5
+  rotate: false
+  xy: 880, 34
+  size: 98, 111
+  orig: 98, 111
+  offset: 0, 0
+  index: -1
+Layer 6
+  rotate: false
+  xy: 492, 2
+  size: 93, 63
+  orig: 93, 63
+  offset: 0, 0
+  index: -1
+Layer 7
+  rotate: true
+  xy: 492, 67
+  size: 85, 83
+  orig: 85, 83
+  offset: 0, 0
+  index: -1
+Layer 8
+  rotate: false
+  xy: 381, 154
+  size: 194, 100
+  orig: 194, 100
+  offset: 0, 0
+  index: -1
+Layer10
+  rotate: false
+  xy: 2, 155
+  size: 377, 99
+  orig: 377, 99
+  offset: 0, 0
+  index: -1
+Layer11
+  rotate: false
+  xy: 763, 41
+  size: 115, 104
+  orig: 115, 104
+  offset: 0, 0
+  index: -1
+Layer12
+  rotate: false
+  xy: 358, 45
+  size: 132, 107
+  orig: 132, 107
+  offset: 0, 0
+  index: -1
+Layer8
+  rotate: true
+  xy: 577, 113
+  size: 141, 184
+  orig: 141, 184
+  offset: 0, 0
+  index: -1
+Layer9
+  rotate: true
+  xy: 229, 34
+  size: 119, 127
+  orig: 119, 127
+  offset: 0, 0
+  index: -1
