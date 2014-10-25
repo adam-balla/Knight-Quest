@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{C944E33B-1464-89F2-AC64-588D6BFDB09E}</ProjectGuid>
+	<ProjectGuid>{8FB7FA57-1EF2-CEB3-8C17-4993BAF348BF}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -85,15 +85,43 @@
      <Compile Include="Assets\spine-unity\SkeletonUtility\SkeletonUtilityGroundConstraint.cs" />
      <Compile Include="Assets\spine-unity\SkeletonUtility\SkeletonUtilityKinematicShadow.cs" />
      <Compile Include="Assets\spine-unity\SkeletonUtility\SkeletonUtilitySubmeshRenderer.cs" />
+     <None Include="Assets\spine animations\hero animations\left jump\little knight.atlas.txt" />
      <None Include="Assets\spine-unity\Shaders\HiddenPass.shader" />
      <None Include="Assets\little knight\data\skeleton.atlas.txt" />
+     <None Include="Assets\spine animations\enemy animations\left damaged\skeleton.atlas.txt" />
+     <None Include="Assets\spine animations\hero animations\left run\skeleton.atlas.txt" />
+     <None Include="Assets\spine animations\enemy animations\left run\skeleton.atlas.txt" />
      <None Include="Assets\little knight\data 2\little knight.atlas.txt" />
      <None Include="Assets\little knight\data\little knight.atlas.txt" />
+     <None Include="Assets\spine animations\hero animations\right jump\little knight.atlas.txt" />
+     <None Include="Assets\spine animations\enemy animations\left run\egg dragon.atlas.txt" />
+     <None Include="Assets\spine animations\hero animations\right damaged\little knight.atlas.txt" />
+     <None Include="Assets\spine animations\hero animations\left idle\little knight.atlas.txt" />
+     <None Include="Assets\spine animations\hero animations\right damaged\skeleton.atlas.txt" />
+     <None Include="Assets\spine animations\hero animations\left slash\skeleton.atlas.txt" />
+     <None Include="Assets\spine animations\hero animations\left damaged\little knight.atlas.txt" />
      <None Include="Assets\enemy\data\egg dragon.atlas.txt" />
+     <None Include="Assets\spine animations\enemy animations\right damaged\egg dragon.atlas.txt" />
+     <None Include="Assets\spine animations\enemy animations\right damaged\skeleton.atlas.txt" />
+     <None Include="Assets\spine animations\hero animations\right run\right run.atlas.txt" />
+     <None Include="Assets\spine animations\enemy animations\left damaged\egg dragon.atlas.txt" />
+     <None Include="Assets\spine animations\hero animations\left slash\little knight.atlas.txt" />
+     <None Include="Assets\spine animations\hero animations\left jump\skeleton.atlas.txt" />
+     <None Include="Assets\spine animations\hero animations\left idle\skeleton.atlas.txt" />
+     <None Include="Assets\spine animations\enemy animations\right run\skeleton.atlas.txt" />
      <None Include="Assets\little knight\data 2\skeleton.atlas.txt" />
+     <None Include="Assets\spine animations\hero animations\left run\little knight.atlas.txt" />
+     <None Include="Assets\spine animations\hero animations\right idle\right idle.atlas.txt" />
      <None Include="Assets\spine-unity\Shaders\Bones.shader" />
+     <None Include="Assets\spine animations\hero animations\right run\skeleton.atlas.txt" />
+     <None Include="Assets\spine animations\enemy animations\right run\egg dragon.atlas.txt" />
      <None Include="Assets\enemy\data\skeleton.atlas.txt" />
+     <None Include="Assets\spine animations\hero animations\right slash\skeleton.atlas.txt" />
+     <None Include="Assets\spine animations\hero animations\right slash\little knight.atlas.txt" />
+     <None Include="Assets\spine animations\hero animations\right jump\skeleton.atlas.txt" />
      <None Include="Assets\spine-unity\Shaders\Skeleton.shader" />
+     <None Include="Assets\spine animations\hero animations\right idle\skeleton.atlas.txt" />
+     <None Include="Assets\spine animations\hero animations\left damaged\skeleton.atlas.txt" />
      <None Include="Assets\spine-unity\Shaders\SkeletonLit.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
