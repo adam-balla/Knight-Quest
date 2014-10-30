@@ -1,0 +1,113 @@
+{
+"skeleton": {
+	"hash": "sO8e40gD97eXfF4oB9PtQBfQOGY",
+	"spine": "2.0.23",
+	"width": 520.74,
+	"height": 236.36,
+	"images": "C:/Users/Zsombor/Desktop/PaintTool_SAI_English_ver.1.10/little knight/new"
+},
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "cloud 3", "bone": "root", "attachment": "cloud 3" },
+	{ "name": "cloud 6", "bone": "root", "attachment": "cloud 6" }
+],
+"skins": {
+	"default": {
+		"cloud 3": {
+			"cloud 3": {
+				"type": "mesh",
+				"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+				"triangles": [ 1, 2, 3, 1, 3, 0 ],
+				"vertices": [ 317.23, 72.87, -413.76, 72.87, -413.76, 390.87, 317.23, 390.87 ],
+				"hull": 4,
+				"edges": [ 0, 2, 2, 4, 4, 6, 0, 6 ],
+				"width": 731,
+				"height": 318
+			}
+		},
+		"cloud 6": {
+			"cloud 6": {
+				"type": "mesh",
+				"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+				"triangles": [ 1, 2, 3, 1, 3, 0 ],
+				"vertices": [ 485.89, -42.25, -608.1, -42.25, -608.1, 486.74, 485.89, 486.74 ],
+				"hull": 4,
+				"edges": [ 0, 2, 2, 4, 4, 6, 0, 6 ],
+				"width": 1094,
+				"height": 529
+			}
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"cloud 3": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 5.3333, "color": "ffffff88" },
+					{ "time": 8.6666, "color": "ffffffff" },
+					{ "time": 13.3333, "color": "ffffff00" }
+				]
+			},
+			"cloud 6": {
+				"color": [
+					{ "time": 0.4333, "color": "fffffffe" },
+					{ "time": 5.3333, "color": "ffffff52" },
+					{ "time": 7.3333, "color": "ffffff00" }
+				]
+			}
+		},
+		"ffd": {
+			"default": {
+				"cloud 3": {
+					"cloud 3": [
+						{
+							"time": 0,
+							"vertices": [ 77.8, -33.84, -77.8, -33.84, -77.8, 33.84, 77.8, 33.84 ]
+						},
+						{
+							"time": 4,
+							"vertices": [ 0.22, -0.09, -10.27, -5.12, -6.92, 3.44, 0.22, 0.09 ]
+						},
+						{
+							"time": 5.3333,
+							"vertices": [ -25.63, 11.14, 25.63, 11.14, 25.63, -11.14, -25.63, -11.14 ]
+						},
+						{
+							"time": 8.6666,
+							"vertices": [ -109.39, 47.58, 109.39, 47.58, 109.39, -47.58, -109.39, -47.58 ]
+						},
+						{
+							"time": 13.3333,
+							"vertices": [ -258.16, 96.13, 219.66, 91.11, 209.62, -89.43, -216.31, -94.46 ]
+						}
+					]
+				},
+				"cloud 6": {
+					"cloud 6": [
+						{
+							"time": 0,
+							"vertices": [ 112.83, -54.56, -103.4, -45.13, -98.25, 47.05, 112.83, 54.56 ]
+						},
+						{
+							"time": 0.6666,
+							"vertices": [ 73.43, -18.32, -72.25, -30.67, -51.24, 30.26, 61.64, 25.74 ]
+						},
+						{
+							"time": 5.2333,
+							"vertices": [ -179.14, 119.31, 195.8, 128.07, 220.04, -167.56, -232.16, -72.58 ]
+						},
+						{
+							"time": 6.6333,
+							"vertices": [ -304.16, 179.67, 269.09, 146.75, 289.02, -219.29, -312.64, -145.87 ]
+						}
+					]
+				}
+			}
+		}
+	}
+}
+}

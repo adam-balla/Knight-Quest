@@ -1,0 +1,48 @@
+
+tree 1.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+branch 1
+  rotate: false
+  xy: 523, 111
+  size: 242, 124
+  orig: 242, 124
+  offset: 0, 0
+  index: -1
+branch 2
+  rotate: false
+  xy: 791, 497
+  size: 168, 160
+  orig: 168, 160
+  offset: 0, 0
+  index: -1
+top 1
+  rotate: true
+  xy: 791, 659
+  size: 293, 197
+  orig: 293, 197
+  offset: 0, 0
+  index: -1
+top 2
+  rotate: false
+  xy: 2, 459
+  size: 787, 493
+  orig: 787, 493
+  offset: 0, 0
+  index: -1
+top 3
+  rotate: false
+  xy: 523, 237
+  size: 237, 220
+  orig: 237, 220
+  offset: 0, 0
+  index: -1
+tree
+  rotate: false
+  xy: 2, 2
+  size: 519, 455
+  orig: 519, 455
+  offset: 0, 0
+  index: -1
