@@ -8,7 +8,7 @@ public class cloud : MonoBehaviour {
 	public float maxSize;
 	public float minHeight;
 	public float maxHeight;
-	public float animLength;
+	private float animLength;
 	private const float timeScale = 0.25f;
 	private int order;
 	private float speed;
@@ -27,14 +27,14 @@ public class cloud : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (transform.localPosition.x > -35) {
+		if (Mathf.Sign(speed) * -transform.localPosition.x > -35) {
 			transform.Translate(speed * Time.deltaTime, 0, 0);
 		}
 		else {
 			speed = Random.Range(minSpeed, maxSpeed);
 			size = Random.Range(minSize, maxSize);
 			order = 2 * Random.Range(0, 2);
-			transform.localPosition = new Vector3(15.0f, Random.Range(minHeight, maxHeight), 0.0f);
+			transform.localPosition = new Vector3(Mathf.Sign(speed) * -15.0f, Random.Range(minHeight, maxHeight), 0.0f);
 			transform.localScale = new Vector3(size, size, size);
 			renderer.sortingOrder = order;
 			GetComponent<SkeletonAnimation>().AnimationName = "";

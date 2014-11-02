@@ -16,12 +16,15 @@ public class flower : MonoBehaviour {
 		if (Input.GetButtonDown("slash") && playerActive && alive) {
 			if(Random.Range(0, 2) == 0){
 				GetComponent<SkeletonAnimation>().loop = false;
-				GetComponent<SkeletonAnimation>().state.AddAnimation(1, "animation4", false, 0.0f);
+				GetComponent<SkeletonAnimation>().state.ClearTrack(1);
+				GetComponent<SkeletonAnimation>().state.SetAnimation(1, "animation0", false);
+				GetComponent<SkeletonAnimation>().state.AddAnimation(1, "animation4", false, 0.025f);
 				GetComponent<SkeletonAnimation>().timeScale = 1;
 			} else {
 				GetComponent<SkeletonAnimation>().loop = false;
 				GetComponent<SkeletonAnimation>().state.ClearTrack(1);
-				GetComponent<SkeletonAnimation>().state.AddAnimation(1, "animation1", false, 0.0f);
+				GetComponent<SkeletonAnimation>().state.SetAnimation(1, "animation0", false);
+				GetComponent<SkeletonAnimation>().state.AddAnimation(1, "animation1", false, 0.025f);
 				GetComponent<SkeletonAnimation>().timeScale = 0.25f;
 				alive = false;
 			}

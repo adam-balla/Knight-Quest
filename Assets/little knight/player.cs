@@ -3,8 +3,8 @@ using System.Collections;
 
 public class player : MonoBehaviour {
 	public float speed;
-	public string currentAnimation;
-	public string direction;
+	private string currentAnimation;
+	private string direction;
 	private Vector3 way, wayPrev;
 	private float timer;
 	private bool bam;
@@ -81,20 +81,19 @@ public class player : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		if (other.gameObject.name == "upperBoundary") {
-			GameObject.Find("dimension").transform.Translate(0, 5, 0);
-		}
-
-		if (other.gameObject.name == "lowerBoundary") {
-			GameObject.Find("dimension").transform.Translate(0, -5, 0);
-		}
 
 		if (other.gameObject.name == "up") {
 			way = new Vector3(Mathf.Cos(Mathf.Deg2Rad * 35.0f), Mathf.Sin(Mathf.Deg2Rad * 35.0f), 0);
 		}
-
 		if (other.gameObject.name == "down") {
 			way = new Vector3(Mathf.Cos(Mathf.Deg2Rad * -35.0f), Mathf.Sin(Mathf.Deg2Rad * -35.0f), 0);
+		}
+
+		if (other.gameObject.name == "up0") {
+			transform.localPosition = new Vector3(transform.localPosition.x, -6.670548f + other.transform.parent.localPosition.y, transform.localPosition.z);
+		}
+		if (other.gameObject.name == "up1") {
+			transform.localPosition = new Vector3(transform.localPosition.x, 1.629452f + other.transform.parent.localPosition.y, transform.localPosition.z);
 		}
 
 		if (other.gameObject.tag == "hittable") {
@@ -105,7 +104,6 @@ public class player : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D other){
 		if (other.gameObject.name == "up" || other.gameObject.name == "down") {
 			way = new Vector3(1, 0, 0);
-			transform.Translate(0, 0, 0);
 		}
 
 		if (other.gameObject.tag == "hittable") {
