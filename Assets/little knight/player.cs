@@ -23,7 +23,23 @@ public class player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update() {
-		if (timer > 0) { timer -= Time.deltaTime; }
+		if (timer > 0) {
+			timer -= Time.deltaTime;
+			if (currentAnimation == "right_jump") {
+				if (Input.GetButton("runLeft")) {
+					GameObject.Find("right_jump").renderer.enabled = false;
+					currentAnimation = "left_jump";
+					GameObject.Find("left_jump").renderer.enabled = true;
+				}
+			}
+			if (currentAnimation == "left_jump") {
+				if (Input.GetButton("runRight")) {
+					GameObject.Find("left_jump").renderer.enabled = false;
+					currentAnimation = "right_jump";
+					GameObject.Find("right_jump").renderer.enabled = true;
+				}
+			}
+		}
 		else {
 			GameObject.Find (currentAnimation).renderer.enabled = false;
 			currentAnimation = direction + "_idle";
@@ -56,8 +72,10 @@ public class player : MonoBehaviour {
 			if (Input.GetButtonDown("jump")) {
 				GameObject.Find(currentAnimation).renderer.enabled = false;
 				currentAnimation = direction + "_jump";
-				GameObject.Find(currentAnimation).GetComponent<SkeletonAnimation>().AnimationName = "";
-				GameObject.Find(currentAnimation).GetComponent<SkeletonAnimation>().AnimationName = currentAnimation;
+				GameObject.Find("right_jump").GetComponent<SkeletonAnimation>().AnimationName = "";
+				GameObject.Find("right_jump").GetComponent<SkeletonAnimation>().AnimationName = "right_jump";
+				GameObject.Find("left_jump").GetComponent<SkeletonAnimation>().AnimationName = "";
+				GameObject.Find("left_jump").GetComponent<SkeletonAnimation>().AnimationName = "left_jump";
 				timer = jumpTime;
 			}
 
@@ -131,6 +149,11 @@ public class player : MonoBehaviour {
 			if (direction == "left" && Input.GetButtonUp ("runLeft")) {
 				GameObject.Find (currentAnimation).renderer.enabled = false;
 				currentAnimation = "left_idle";
+			}
+		} else {
+			if (currentAnimation == "right_jump" || currentAnimation == "left_jump") {
+				if (timer - Time.deltaTime < 0) timer = Time.deltaTime;
+				GameObject.Find ("circle").transform.Translate(0.0f, timer - 0.45f, 0.0f);
 			}
 		}
 		

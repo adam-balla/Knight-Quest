@@ -32,13 +32,13 @@ public class flower : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D other) {
-		if (other.gameObject.name == "player") {
+		if (other.gameObject.name == "trigger") {
 			playerActive = true;
 		}
 	}
 
 	void OnTriggerExit2D (Collider2D other) {
-		if (other.gameObject.name == "player") {
+		if (other.gameObject.name == "trigger") {
 			playerActive = false;
 		}
 	}
