@@ -10,6 +10,7 @@ public class player : MonoBehaviour {
 	private bool bam;
 	private const float jumpTime = 0.900f;
 	private const float slashTime = 0.333f;
+	private const float damagedTime = 0.167f;
 
 	// Use this for initialization
 	void Start() {
@@ -24,6 +25,7 @@ public class player : MonoBehaviour {
 	// Update is called once per frame
 	void Update() {
 		if (timer > 0) {
+			float step = speed * Time.deltaTime;
 			timer -= Time.deltaTime;
 			if (currentAnimation == "right_jump") {
 				if (Input.GetButton("runLeft")) {
@@ -38,6 +40,12 @@ public class player : MonoBehaviour {
 					currentAnimation = "right_jump";
 					GameObject.Find("right_jump").renderer.enabled = true;
 				}
+			}
+			if (currentAnimation == "right_damaged") {
+				transform.Translate (way * -step);
+			}
+			if (currentAnimation == "left_damaged") {
+				transform.Translate (way * step);
 			}
 		}
 		else {
@@ -117,6 +125,13 @@ public class player : MonoBehaviour {
 		if (other.gameObject.tag == "hittable") {
 			bam = true;
 		}
+		if (other.gameObject.name == "damage") {
+			GameObject.Find(currentAnimation).renderer.enabled = false;
+			currentAnimation = direction + "_damaged";
+			GameObject.Find(currentAnimation).GetComponent<SkeletonAnimation>().AnimationName = "";
+			GameObject.Find(currentAnimation).GetComponent<SkeletonAnimation>().AnimationName = currentAnimation;
+			timer = damagedTime;
+		}
 	}
 
 	void OnTriggerExit2D(Collider2D other){
@@ -153,7 +168,7 @@ public class player : MonoBehaviour {
 		} else {
 			if (currentAnimation == "right_jump" || currentAnimation == "left_jump") {
 				if (timer - Time.deltaTime < 0) timer = Time.deltaTime;
-				GameObject.Find ("circle").transform.Translate(0.0f, timer - 0.45f, 0.0f);
+				GameObject.Find ("circle").transform.Translate(0.0f, 1.5f*(timer - 0.45f), 0.0f);
 			}
 		}
 		

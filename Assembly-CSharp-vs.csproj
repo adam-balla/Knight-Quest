@@ -97,6 +97,7 @@
      <None Include="Assets\items-objects\clouds\data 2\cloud1.atlas.txt" />
      <None Include="Assets\little knight\data\skeleton.atlas.txt" />
      <None Include="Assets\items-objects\flower\data\flower.atlas.txt" />
+     <None Include="Assets\spine animations\hero animations\left run\left_run.atlas.txt" />
      <None Include="Assets\items-objects\hit symbol\data\bam.atlas.txt" />
      <None Include="Assets\little knight\data 2\little knight.atlas.txt" />
      <None Include="Assets\little knight\data\little knight.atlas.txt" />
@@ -109,9 +110,11 @@
      <None Include="Assets\spine animations\hero animations\left damaged\left_damaged.atlas.txt" />
      <None Include="Assets\enemy\data\egg dragon.atlas.txt" />
      <None Include="Assets\spine animations\enemy animations\right damaged\egg dragon.atlas.txt" />
+     <None Include="Assets\spine animations\hero animations\left jump 2\left_jump_2.atlas.txt" />
      <None Include="Assets\spine animations\hero animations\right run\right_run.atlas.txt" />
      <None Include="Assets\spine animations\enemy animations\left damaged\egg dragon.atlas.txt" />
      <None Include="Assets\spine animations\hero animations\left slash\left_slash.atlas.txt" />
+     <None Include="Assets\spine animations\hero animations\right jump 2\right_jump_2.atlas.txt" />
      <None Include="Assets\little knight\data 2\skeleton.atlas.txt" />
      <None Include="Assets\spine animations\hero animations\right idle\right_idle.atlas.txt" />
      <None Include="Assets\spine-unity\Shaders\Bones.shader" />
@@ -120,7 +123,6 @@
      <None Include="Assets\spine animations\hero animations\right slash\right_slash.atlas.txt" />
      <None Include="Assets\spine-unity\Shaders\Skeleton.shader" />
      <None Include="Assets\items-objects\clouds\data 1\cloud0.atlas.txt" />
-     <None Include="Assets\spine animations\hero animations\left run\left_run.atlas.txt" />
      <None Include="Assets\spine-unity\Shaders\SkeletonLit.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -24,11 +24,19 @@ public class enemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update() {
+		float step = speed * Time.deltaTime;
 		if (timer > 0) {
+			if (currentAnimation == "left_damaged" || currentAnimation == "right_damaged") {
+				if (direction == "left") {
+					transform.Translate(2 * way * step);
+				}
+				if (direction == "right") {
+					transform.Translate(2 * way * -step);
+				}
+			}
 			timer -= Time.deltaTime;
 		} else {
-			if (life <= 0) transform.renderer.enabled = false;
-			float step = speed * Time.deltaTime;
+			if (life <= 0) Destroy (gameObject);
 			if (currentAnimation == "left_damaged" || currentAnimation == "right_damaged"){
 				currentAnimation = direction + "_run";
 				GetComponent<SkeletonAnimation>().loop = true;
