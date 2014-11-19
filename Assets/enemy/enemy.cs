@@ -75,7 +75,7 @@ public class enemy : MonoBehaviour {
 		}
 		
 		if (other.gameObject.name == "up0") {
-			transform.localPosition = new Vector3(transform.localPosition.x, -5.0f + other.transform.parent.localPosition.y, transform.localPosition.z);
+			transform.localPosition = new Vector3(transform.localPosition.x, -6.0f + other.transform.parent.localPosition.y, transform.localPosition.z);
 		}
 		if (other.gameObject.name == "up1") {
 			transform.localPosition = new Vector3(transform.localPosition.x, 1.5f + other.transform.parent.localPosition.y, transform.localPosition.z);

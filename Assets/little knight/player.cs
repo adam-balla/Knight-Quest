@@ -125,6 +125,7 @@ public class player : MonoBehaviour {
 		if (other.gameObject.tag == "hittable") {
 			bam = true;
 		}
+		if (currentAnimation != "left_jump" && currentAnimation != "right_jump")
 		if (other.gameObject.name == "damage") {
 			GameObject.Find(currentAnimation).renderer.enabled = false;
 			currentAnimation = direction + "_damaged";
@@ -167,8 +168,11 @@ public class player : MonoBehaviour {
 			}
 		} else {
 			if (currentAnimation == "right_jump" || currentAnimation == "left_jump") {
-				if (timer - Time.deltaTime < 0) timer = Time.deltaTime;
-				GameObject.Find ("circle").transform.Translate(0.0f, 1.5f*(timer - 0.45f), 0.0f);
+				if (timer - Time.deltaTime < 0){
+					GameObject.Find ("circle").transform.localPosition = new Vector3(0, 0, 0);
+				} else {
+					GameObject.Find ("circle").transform.Translate(0.0f, 1.5f*(timer - 0.45f), 0.0f);
+				}
 			}
 		}
 		
