@@ -24,6 +24,12 @@ public class enemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update() {
+		RaycastHit2D hitInfo = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 10.0f), -Vector2.up, Mathf.Infinity, 1 << LayerMask.NameToLayer("field"));
+		float y = hitInfo.point.y;
+		Vector3 pos = transform.position;
+		pos.y = y;
+		transform.position = pos;
+
 		float step = speed * Time.deltaTime;
 		if (timer > 0) {
 			if (currentAnimation == "left_damaged" || currentAnimation == "right_damaged") {
@@ -66,20 +72,6 @@ public class enemy : MonoBehaviour {
 		if (other.gameObject.name == "trigger") {
 			playerActive = true;
 		}
-
-		if (other.gameObject.name == "up") {
-			way = new Vector3(Mathf.Cos(Mathf.Deg2Rad * 35.0f), Mathf.Sin(Mathf.Deg2Rad * 35.0f), 0);
-		}
-		if (other.gameObject.name == "down") {
-			way = new Vector3(Mathf.Cos(Mathf.Deg2Rad * -35.0f), Mathf.Sin(Mathf.Deg2Rad * -35.0f), 0);
-		}
-		
-		if (other.gameObject.name == "up0") {
-			transform.localPosition = new Vector3(transform.localPosition.x, -6.0f + other.transform.parent.localPosition.y, transform.localPosition.z);
-		}
-		if (other.gameObject.name == "up1") {
-			transform.localPosition = new Vector3(transform.localPosition.x, 1.5f + other.transform.parent.localPosition.y, transform.localPosition.z);
-		}
 	}
 	
 	void OnTriggerExit2D(Collider2D other){
@@ -89,10 +81,6 @@ public class enemy : MonoBehaviour {
 
 		if (other.gameObject.name == "position") {
 			direction = GameObject.Find("player").transform.localPosition.x > transform.localPosition.x ? "right" : "left";
-		}
-
-		if (other.gameObject.name == "up" || other.gameObject.name == "down") {
-			way = new Vector3(1, 0, 0);
 		}
 	}
 }
